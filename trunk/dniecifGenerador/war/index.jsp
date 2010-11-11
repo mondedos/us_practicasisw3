@@ -15,6 +15,7 @@ usar dwr para generar los dnis.
 <script type="text/javascript">
 
 Demo.getNIFs(4, {
+	
 	  callback:function(str) { 
 	    alert(str); 
 	  }
