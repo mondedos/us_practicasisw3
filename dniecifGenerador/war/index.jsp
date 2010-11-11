@@ -7,12 +7,30 @@
 <title>Generador de DNI, NIE y CIF</title>
 <script type='text/javascript' src='/dwr/interface/Demo.js'></script>
   <script type='text/javascript' src='/dwr/engine.js'></script>
+  <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
   <style type="text/css">
   
   #pie {
   text-align: center;
   }
   </style>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  
+  $('#generar').click(function(){
+  
+  Demo.getNIFs(4, {
+	
+	  callback:function(str) { 
+	    $('#sol').val(str); 
+	  }
+  });
+  
+
+	});
+  
+  });
+  </script>
 </head>
 <body>
 <div id="cabezera"></div>
@@ -33,7 +51,13 @@
 </div>
 </div>
 <div>
-<input type="button" value="Generar Documento" />
+<input type="button" value="Generar Documento" id="generar" />
+</div>
+<div class="solucion">
+<div><label for="sol">Documentos generados</label></div>
+
+<div><textarea rows="10" cols="50" id="sol"></textarea></div>
+
 </div>
 <div id="pie">
 
@@ -41,16 +65,5 @@
 
 </div>
 
-
-<script type="text/javascript">
-
-Demo.getNIFs(4, {
-	
-	  callback:function(str) { 
-	    alert(str); 
-	  }
-	});
-
-</script>
 </body>
 </html>
