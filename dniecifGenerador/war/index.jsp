@@ -5,13 +5,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Generador de DNI, NIE y CIF</title>
+<meta name="keywords" content="dni, nie, cif, generador" />
+<meta name="description" content="Herramienta de generación de DNI, NIE, y CIF online" />
+<meta name="author" content="Ricardo Prieto Mendoza" /><meta name="distribution" content="global" /><meta name="robots" content="all" /><meta http-equiv="content-language" content="es" />
 <script type='text/javascript' src='/dwr/interface/Demo.js'></script>
   <script type='text/javascript' src='/dwr/engine.js'></script>
   <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
   <style type="text/css">
-  
+  body {
+  background:none repeat scroll 0 0 #E5ECF9;
+  }
+  body div {
+  text-align:center;
+  }
+  #cabezera{
+  text-align:center;
+  }
   #pie {
   text-align: center;
+  }
+  #numDoc {
+  width:50px;
+  }
+  .botonera {
+ margin-top: 20px; margin-bottom: 20px;
   }
   </style>
   <script type="text/javascript">
@@ -58,7 +75,9 @@ if(IsNumeric(numdoc)){
   </script>
 </head>
 <body>
-<div id="cabezera"></div>
+<div id="cabezera">
+<h1>Herramienta de generación de DNI, NIE, y CIF online</h1>
+</div>
 <div id="contenido">
 	<div class="numeroDocumentos">
 	<label for="numDoc">Número de documentos a generar</label>
@@ -75,7 +94,7 @@ if(IsNumeric(numdoc)){
 <input type="radio" name="tipo" value="cif" id="cif"  />
 </div>
 </div>
-<div>
+<div class="botonera">
 <input type="button" value="Generar Documento" id="generar" />
 </div>
 <div class="solucion">
@@ -85,7 +104,7 @@ if(IsNumeric(numdoc)){
 
 </div>
 <div id="pie">
-<p>Esta finalidad de esta herramienta es exclusiva para facilitar a los desarrolladores las pruebas de sus algoritmos
+<p>La finalidad de esta herramienta es exclusiva para facilitar a los desarrolladores las pruebas de sus algoritmos
 de forma fácil y eficaz, con documentos válidos. Estos documentos son aleatorios generados por el sistema.
 El mal uso de esta herramienta es responsabilidad exclusiva de quien realize tales actos, eximiendome al completo sobre los mismos.
 </p>
@@ -93,6 +112,7 @@ El mal uso de esta herramienta es responsabilidad exclusiva de quien realize tal
 y sin ningún inconveniente, esta herramienta dejará de estar operativa.</p>
 <div><img src="imagenes/dnie.gif" alt="Imagen del dni electronico español" /></div>
 
+<a href="http://utilidesarrollo.blogspot.com/">Visite mi Blog</a>
 </div>
 
 </body>
