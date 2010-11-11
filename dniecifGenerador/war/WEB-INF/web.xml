@@ -4,14 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	<servlet>
-		<servlet-name>DniecifGenerador</servlet-name>
-		<servlet-class>org.rpm.DniecifGeneradorServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>DniecifGenerador</servlet-name>
-		<url-pattern>/dniecifgenerador</url-pattern>
-	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>dwr-invoker</servlet-name>
