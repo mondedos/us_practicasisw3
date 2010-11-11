@@ -85,7 +85,12 @@ if(IsNumeric(numdoc)){
 
 </div>
 <div id="pie">
-
+<p>Esta finalidad de esta herramienta es exclusiva para facilitar a los desarrolladores las pruebas de sus algoritmos
+de forma fácil y eficaz, con documentos válidos. Estos documentos son aleatorios generados por el sistema.
+El mal uso de esta herramienta es responsabilidad exclusiva de quien realize tales actos, eximiendome al completo sobre los mismos.
+</p>
+<p>Si por algún motivo, las autoridades deciden que debo de eliminar esta herramienta, sólo tienen que ponerse en contacto con migo
+y sin ningún inconveniente, esta herramienta dejará de estar operativa.</p>
 <div><img src="imagenes/dnie.gif" alt="Imagen del dni electronico español" /></div>
 
 </div>
