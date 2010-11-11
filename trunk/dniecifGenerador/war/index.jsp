@@ -15,17 +15,42 @@
   }
   </style>
   <script type="text/javascript">
+  function IsNumeric(expression)
+  	{
+  	    return (String(expression).search(/^\d+$/) != -1);
+  }
   $(document).ready(function(){
   
   $('#generar').click(function(){
-  
-  Demo.getNIFs(4, {
-	
+		 var doc= $('input:radio[name=tipo]:checked').val();
+
+		 
+var numdoc=$('#numDoc').val();
+
+
+if(IsNumeric(numdoc)){
+		 if(doc=='dni'){
+		 
+  Demo.getNIFs(numdoc, {
 	  callback:function(str) { 
 	    $('#sol').val(str); 
 	  }
   });
-  
+		 }else if(doc=='nie'){
+			  Demo.getNIEs(numdoc, {
+				  callback:function(str) { 
+				    $('#sol').val(str); 
+				  }
+			  });
+		 }
+		 else if(doc=='cif'){
+			  Demo.getCIFs(numdoc, {
+				  callback:function(str) { 
+				    $('#sol').val(str); 
+				  }
+			  });
+		 }
+}
 
 	});
   
@@ -43,7 +68,7 @@
 <p>Tipo de documento a generar</p>
 <div>
 <label for="dni">D.N.I.</label>
-<input type="radio" name="tipo" value="dni" id="dni"   />
+<input type="radio" name="tipo" value="dni" id="dni" checked="checked"  />
 <label for="nie">N.I.E.</label>
 <input type="radio" name="tipo" value="nie" id="nie"  />
 <label for="cif">C.I.F.</label>
@@ -55,7 +80,7 @@
 </div>
 <div class="solucion">
 <div><label for="sol">Documentos generados</label></div>
-
+ 
 <div><textarea rows="10" cols="50" id="sol"></textarea></div>
 
 </div>
