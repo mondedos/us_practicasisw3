@@ -12,10 +12,12 @@ import java.util.Random;
  * 
  *         Esta clase cumple con la normativa actual española.
  * 
- *         Decreto 2423/1975, de 25 de septiembre. Real Decreto 338/1990, de 9 de marzo. Real Decreto 1624/1992, de 29
- *         de diciembre que modifica el 338/1990. Real Decreto 155/1996, de 2 de febrero. Orden de 3 de julio de 1998,
- *         por la que se modifica el Anexo del Decreto 2423/1975. Real Decreto 1065/2007, de 27 de julio. Orden
- *         EHA/451/2008, de 20 de febrero de 2008. Orden INT/2058/2008, de 14 de julio de 2008.
+ *         Decreto 2423/1975, de 25 de septiembre. Real Decreto 338/1990, de 9
+ *         de marzo. Real Decreto 1624/1992, de 29 de diciembre que modifica el
+ *         338/1990. Real Decreto 155/1996, de 2 de febrero. Orden de 3 de julio
+ *         de 1998, por la que se modifica el Anexo del Decreto 2423/1975. Real
+ *         Decreto 1065/2007, de 27 de julio. Orden EHA/451/2008, de 20 de
+ *         febrero de 2008. Orden INT/2058/2008, de 14 de julio de 2008.
  */
 public class GeneradorNIFE {
 	private List<String> retVal;
@@ -61,7 +63,8 @@ public class GeneradorNIFE {
 	private String letraDNI(int dni) {
 		int indice = dni % 23;
 
-		return (new Character("TRWAGMYFPDXBNJZSQVHLCKE".charAt(indice))).toString();
+		return (new Character("TRWAGMYFPDXBNJZSQVHLCKE".charAt(indice)))
+				.toString();
 	}
 
 	/**
@@ -104,11 +107,22 @@ public class GeneradorNIFE {
 
 		Integer numero = Integer.parseInt(padLeft(numDNI.toString(), 7, '0'));
 
-		return (new Character(letraCIF())).toString() + padLeft(numDNI.toString(), 7, '0')
-				+ numeroCIF(numero.toString());
+		char letraIzq = letraCIF();
+
+		return (new Character(letraIzq)).toString()
+				+ padLeft(numDNI.toString(), 7, '0')
+				+ numeroCIF(numero.toString(), letraIzq);
 	}
 
-	private String numeroCIF(String numero) {
+	/**
+	 * Obtiene el digito de control de un CIF
+	 * 
+	 * @param numero
+	 *            sin digito de control
+	 * @param letra
+	 * @return
+	 */
+	private String numeroCIF(String numero, char letra) {
 		int sumaPares = 0;
 		int sumaImpares = 0;
 		int sumaTotal = 0;
@@ -117,20 +131,53 @@ public class GeneradorNIFE {
 		for (int i = 0; i < numero.length(); i++) {
 			if ((i + 1) % 2 == 0) {
 				// si la posicion es par
-				sumaPares += Integer.parseInt((new Character(numero.charAt(i))).toString());
+				sumaPares += Integer.parseInt((new Character(numero.charAt(i)))
+						.toString());
 			} else {
-				sumaImpares += sumarDigitos(Integer.parseInt((new Character(numero.charAt(i))).toString()) * 2);
+				sumaImpares += sumarDigitos(Integer.parseInt((new Character(
+						numero.charAt(i))).toString()) * 2);
 			}
 		}
 
 		sumaTotal = sumaImpares + sumaPares;
 		String st = (new Integer(sumaTotal)).toString();
-		ultimo = 10 - Integer.parseInt((new Character(st.charAt(st.length() - 1))).toString());
+		ultimo = 10 - Integer.parseInt((new Character(st
+				.charAt(st.length() - 1))).toString());
 
 		if (ultimo == 10)
 			ultimo = 0;
 
-		return (new Integer(ultimo)).toString();
+		String solucion;
+
+		String letras = "JABCDEFGHI";
+
+		switch (letra) {
+		case 'K':
+		case 'P':
+		case 'Q':
+		case 'S':
+			// letra
+			solucion = (new Character(letras.charAt(ultimo))).toString();
+			break;
+		case 'A':
+		case 'B':
+		case 'E':
+		case 'H':
+			// numero
+			solucion = (new Integer(ultimo)).toString();
+			break;
+		default:
+			// numero o letra
+			if (semilla.nextInt(2) % 2 == 0) {
+				solucion = (new Character(letras.charAt(ultimo))).toString();
+			} else {
+				solucion = (new Integer(ultimo)).toString();
+			}
+			break;
+		}
+
+		return solucion;
+
 	}
 
 	private int sumarDigitos(int i) {
@@ -147,6 +194,11 @@ public class GeneradorNIFE {
 		return suma;
 	}
 
+	/**
+	 * Genera de forma aleatoria un numero CIF
+	 * 
+	 * @return
+	 */
 	private char letraCIF() {
 		String letras = "ABCDEFGHJKLMNPRQSUVW";
 		int i = semilla.nextInt(letras.length());
@@ -162,9 +214,11 @@ public class GeneradorNIFE {
 		Integer numDNI = new Integer(semilla.nextInt(10000000));
 		Integer codigo = new Integer(semilla.nextInt(3));
 
-		Integer numero = Integer.parseInt(codigo.toString() + padLeft(numDNI.toString(), 7, '0'));
+		Integer numero = Integer.parseInt(codigo.toString()
+				+ padLeft(numDNI.toString(), 7, '0'));
 
-		return (new Character(letraNie(codigo))).toString() + padLeft(numDNI.toString(), 7, '0') + letraDNI(numero);
+		return (new Character(letraNie(codigo))).toString()
+				+ padLeft(numDNI.toString(), 7, '0') + letraDNI(numero);
 	}
 
 	/**
