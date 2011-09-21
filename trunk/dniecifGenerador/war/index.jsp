@@ -24,6 +24,9 @@
  .botonera {
 margin-top: 20px; margin-bottom: 20px;
  }
+ .paginasAmigas, .patrocinadores{
+ padding-top: 0px; margin-top: 15px;
+ }
 </style><script type="text/javascript">
 function IsNumeric(expression){return (String(expression).search(/^\d+$/) != -1);}
 $(document).ready(function(){
@@ -64,4 +67,6 @@ El mal uso de esta herramienta es responsabilidad exclusiva de quien realize tal
 <p>Si por alg&uacute;n motivo, las autoridades deciden que debo de eliminar esta herramienta, s&oacute;lo tienen que ponerse en contacto con migo
 y sin ning&uacute;n inconveniente, esta herramienta dejar&aacute; de estar operativa.</p>
 <p>Se ha subido una nueva versi&oacute;n que corrige el fallo de los CIF que empiezan por K, P, Q &oacute; S.</p>
-<div><img src="imagenes/dnie.gif" alt="Imagen del dni electronico español" /></div><a href="http://utilidesarrollo.blogspot.com/">Visite mi Blog</a></div></body></html>
+<div><img src="imagenes/dnie.gif" alt="Imagen del dni electronico español" /></div><a href="http://utilidesarrollo.blogspot.com/">Visite mi Blog</a>
+
+</div><div class="paginasAmigas"><span>Patrocinado por:</span><div class="patrocinadores"><a href="http://www.maryvel.es/"><img src="https://www.google.com/a/cpanel/maryvel.es/images/logo.gif?service=mail" alt="Patrocinado por Maryvel Moda Infantil" /></a></div></div></body></html>
