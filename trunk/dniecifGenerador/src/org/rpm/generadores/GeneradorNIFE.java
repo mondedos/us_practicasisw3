@@ -105,13 +105,12 @@ public class GeneradorNIFE {
 	private String getCIF() {
 		Integer numDNI = new Integer(semilla.nextInt(10000000));
 
-		Integer numero = Integer.parseInt(padLeft(numDNI.toString(), 7, '0'));
-
+		String padLeft = padLeft(numDNI.toString(), 7, '0');
 		char letraIzq = letraCIF();
 
 		return (new Character(letraIzq)).toString()
-				+ padLeft(numDNI.toString(), 7, '0')
-				+ numeroCIF(numero.toString(), letraIzq);
+				+ padLeft
+				+ numeroCIF(padLeft, letraIzq);
 	}
 
 	/**
