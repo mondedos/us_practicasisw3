@@ -37,7 +37,6 @@ public class GeneradorNIFE {
 		retVal = new ArrayList<String>();
 
 		for (int i = 0; i < numDocuments; i++)
-
 			retVal.add(getNif());
 
 		return retVal;
@@ -108,8 +107,7 @@ public class GeneradorNIFE {
 		String padLeft = padLeft(numDNI.toString(), 7, '0');
 		char letraIzq = letraCIF();
 
-		return (new Character(letraIzq)).toString()
-				+ padLeft
+		return (new Character(letraIzq)).toString() + padLeft
 				+ numeroCIF(padLeft, letraIzq);
 	}
 
