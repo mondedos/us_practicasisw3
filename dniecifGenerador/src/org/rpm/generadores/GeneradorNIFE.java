@@ -197,7 +197,8 @@ public class GeneradorNIFE {
 	 * @return
 	 */
 	private char letraCIF() {
-		String letras = "ABCDEFGHJKLMNPRQSUVW";
+		//String letras = "ABCDEFGHJKLMNPRQSUVW";
+		String letras = "ABCDEFGHJPQRSUV";
 		int i = semilla.nextInt(letras.length());
 		return letras.charAt(i);
 	}
