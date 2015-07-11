@@ -48,25 +48,27 @@ callback:function(str) {
 });
  
 });
+</script></head><body><div id="cabezera"><h1>Herramienta de generaci&oacute;n de DNI, NIE, y CIF online</h1></div><div id="contenido"><div class="numeroDocumentos"><label for="numDoc">N&uacute;mero de documentos a generar (m&aacute;ximo 10)</label><input type="text" name="numeroDocumentos" id="numDoc" value="1" /></div></div><div class="tipoDocumento"><p>Tipo de documento a generar</p><div><label for="dni">D.N.I.</label><input type="radio" name="tipo" value="dni" id="dni" checked="checked"  /><label for="nie">N.I.E.</label><input type="radio" name="tipo" value="nie" id="nie"  /><label for="cif">C.I.F.</label><input type="radio" name="tipo" value="cif" id="cif"  /></div></div><div class="botonera"><input type="button" value="Generar Documento" id="generar" /></div>
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8655698923248885" data-ad-slot="5687863162"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</head><body><div id="cabezera"><h1>Herramienta de generaci&oacute;n de DNI, NIE, y CIF online</h1></div><div id="contenido"><div class="numeroDocumentos"><label for="numDoc">N&uacute;mero de documentos a generar (m&aacute;ximo 10)</label><input type="text" name="numeroDocumentos" id="numDoc" value="1" /></div></div><div class="tipoDocumento"><p>Tipo de documento a generar</p><div><label for="dni">D.N.I.</label><input type="radio" name="tipo" value="dni" id="dni" checked="checked"  /><label for="nie">N.I.E.</label><input type="radio" name="tipo" value="nie" id="nie"  /><label for="cif">C.I.F.</label><input type="radio" name="tipo" value="cif" id="cif"  /></div></div><div class="botonera"><input type="button" value="Generar Documento" id="generar" /></div><div class="solucion"><div><label for="sol">Documentos generados</label></div><div><textarea rows="10" cols="50" id="sol"></textarea></div></div>
-<div id="pie">
-<p>La finalidad de esta herramienta es exclusiva para facilitar a los desarrolladores las pruebas de sus algoritmos
+</div>
+<div class="solucion"><div><label for="sol">Documentos generados</label></div><div><textarea rows="10" cols="50" id="sol"></textarea></div></div>
+<div id="pie"><p>La finalidad de esta herramienta es exclusiva para facilitar a los desarrolladores las pruebas de sus algoritmos
 de forma f&aacute;cil y eficaz, con documentos v&aacute;lidos. Estos documentos son aleatorios generados por el sistema.
 El mal uso de esta herramienta es responsabilidad exclusiva de quien realize tales actos, eximiendome al completo sobre los mismos.
-</p>
-<p>Si por alg&uacute;n motivo, las autoridades deciden que debo de eliminar esta herramienta, s&oacute;lo tienen que ponerse en contacto con migo
+</p><p>Si por alg&uacute;n motivo, las autoridades deciden que debo de eliminar esta herramienta, s&oacute;lo tienen que ponerse en contacto con migo
 y sin ning&uacute;n inconveniente, esta herramienta dejar&aacute; de estar operativa.</p>
 <p>Se ha subido una nueva versi&oacute;n que corrige el fallo de los CIF que empiezan por K, P, Q &oacute; S.</p>
 <div><img src="imagenes/dnie.gif" alt="Imagen del dni electronico español" /></div><a href="http://utilidesarrollo.blogspot.com/">Visite mi Blog</a></div><div class="paginasAmigas">
-
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- utilidesarrollo_main_Blog1_300x250_as -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:250px"
      data-ad-client="ca-pub-8655698923248885"
      data-ad-slot="3114989965"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div></body></html>
+</script></div></body></html>
