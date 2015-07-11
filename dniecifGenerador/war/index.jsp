@@ -48,7 +48,14 @@ callback:function(str) {
 });
  
 });
-</script></head><body><div id="cabezera"><h1>Herramienta de generaci&oacute;n de DNI, NIE, y CIF online</h1></div><div id="contenido"><div class="numeroDocumentos"><label for="numDoc">N&uacute;mero de documentos a generar (m&aacute;ximo 10)</label><input type="text" name="numeroDocumentos" id="numDoc" value="1" /></div></div><div class="tipoDocumento"><p>Tipo de documento a generar</p><div><label for="dni">D.N.I.</label><input type="radio" name="tipo" value="dni" id="dni" checked="checked"  /><label for="nie">N.I.E.</label><input type="radio" name="tipo" value="nie" id="nie"  /><label for="cif">C.I.F.</label><input type="radio" name="tipo" value="cif" id="cif"  /></div></div><div class="botonera"><input type="button" value="Generar Documento" id="generar" /></div>
+</script></head><body>
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8655698923248885" data-ad-slot="5687863162"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><div id="cabezera"><h1>Herramienta de generaci&oacute;n de DNI, NIE, y CIF online</h1></div><div id="contenido"><div class="numeroDocumentos"><label for="numDoc">N&uacute;mero de documentos a generar (m&aacute;ximo 10)</label><input type="text" name="numeroDocumentos" id="numDoc" value="1" /></div></div><div class="tipoDocumento"><p>Tipo de documento a generar</p><div><label for="dni">D.N.I.</label><input type="radio" name="tipo" value="dni" id="dni" checked="checked"  /><label for="nie">N.I.E.</label><input type="radio" name="tipo" value="nie" id="nie"  /><label for="cif">C.I.F.</label><input type="radio" name="tipo" value="cif" id="cif"  /></div></div><div class="botonera"><input type="button" value="Generar Documento" id="generar" /></div>
 <div style="text-align:center">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8655698923248885" data-ad-slot="5687863162"></ins>
